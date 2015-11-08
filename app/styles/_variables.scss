@@ -1,0 +1,22 @@
+$font-family: "ff-enzo-web", sans-serif;
+$font-size-body: 1rem;
+$font-weight-light: 300;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+
+$color-primary: #333;
+$color-secondary: #fafafa;
+$color-text: $color-primary;
+$color-text-invert: $color-secondary;
+
+$section-padding-vertical: 1rem;
+$section-padding-horizontal: 1rem;
+$section-padding: $section-padding-vertical $section-padding-horizontal;
+
+$section-padding-vertical-medium: 2rem;
+$section-padding-horizontal-medium: 4rem;
+$section-padding-medium: $section-padding-vertical-medium $section-padding-horizontal-medium;
+
+$border-weight: 2px;
+
+$media-query-screen-medium: "min-width: 53.750rem";

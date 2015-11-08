@@ -1,0 +1,20 @@
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.Navigation-title {
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+}
+
+.Navigation-links {
+  display: flex;
+  list-style: none;
+}
+
+.Navigation-link {
+  margin-left: 2rem;
+  text-decoration: none;
+}

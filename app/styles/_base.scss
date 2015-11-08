@@ -1,0 +1,54 @@
+// Resets {
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+// } Resets
+
+html,
+body {
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-medium;
+  color: $color-text;
+  background: $color-secondary;
+}
+
+a {
+  color: $color-text;
+}

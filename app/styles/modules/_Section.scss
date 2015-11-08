@@ -1,0 +1,39 @@
+$Section-heading-lineLength: 40px;
+
+.Section {
+  padding: $section-padding;
+
+  @media only screen and ($media-query-screen-medium) {
+    padding: $section-padding-medium;
+  }
+}
+
+.Section-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: -($Section-heading-lineLength + 10px);
+    width: $Section-heading-lineLength;
+    height: $border-weight;
+    background: $color-text;
+  }
+
+  @media only screen and ($media-query-screen-medium) {
+    &--horizontal {
+      position: absolute;
+      margin-top: -.5rem;
+      margin-left: -($section-padding-horizontal-medium/2);
+      font-weight: $font-weight-medium;
+      transform-origin: left;
+      transform: rotate(90deg);
+    }
+  }
+}
