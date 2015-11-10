@@ -1,3 +1,5 @@
+// Mixins
+
 @mixin font-size($font-size) {
   @if type-of($font-size) == "list" {
     font-size: nth($font-size, 1);

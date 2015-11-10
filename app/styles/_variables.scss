@@ -1,3 +1,6 @@
+// Variables
+
+// Typography
 $font-family: "ff-enzo-web", sans-serif;
 
 $font-size-base: 100%;
@@ -18,11 +21,13 @@ $font-weight-light: 300;
 $font-weight-medium: 600;
 $font-weight-bold: 700;
 
+// Colours
 $color-primary: #333;
 $color-secondary: #fafafa;
 $color-text: $color-primary;
 $color-text-invert: $color-secondary;
 
+// Structural
 $section-padding-vertical: 1rem;
 $section-padding-horizontal: 1rem;
 $section-padding: $section-padding-vertical $section-padding-horizontal;
@@ -33,4 +38,5 @@ $section-padding-medium: $section-padding-vertical-medium $section-padding-horiz
 
 $border-weight: 2px;
 
+// Media Queries
 $media-query-screen-medium: "min-width: 53.750rem";
