@@ -3,5 +3,5 @@
 }
 
 .About-primary {
-  font-size: 1.5rem;
+  @include font-size($font-size-large);
 }

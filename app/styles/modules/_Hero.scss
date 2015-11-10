@@ -3,10 +3,13 @@
 }
 
 .Hero-tagLine {
+  @include font-size($font-size-xxlarge);
   margin: .25rem 0;
-  font-size: 4rem;
   font-weight: $font-weight-light;
-  line-height: 1;
+
+  @media only screen and ($media-query-screen-medium) {
+    @include font-size($font-size-huge);
+  }
 }
 
 .Hero-emphasis {

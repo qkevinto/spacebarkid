@@ -2,6 +2,7 @@ $Section-heading-lineLength: 40px;
 
 .Section {
   padding: $section-padding;
+  transition: .3s padding ease;
 
   @media only screen and ($media-query-screen-medium) {
     padding: $section-padding-medium;
@@ -11,8 +12,8 @@ $Section-heading-lineLength: 40px;
 .Section-heading {
   position: relative;
   display: inline-block;
-  font-size: 1.5rem;
-  font-weight: $font-weight-bold;
+  transform: rotate(0);
+  transition: .3s transform ease;
 
   &::after {
     content: "";
@@ -31,7 +32,6 @@ $Section-heading-lineLength: 40px;
       position: absolute;
       margin-top: -.5rem;
       margin-left: -($section-padding-horizontal-medium/2);
-      font-weight: $font-weight-medium;
       transform-origin: left;
       transform: rotate(90deg);
     }

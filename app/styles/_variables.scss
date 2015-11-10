@@ -1,5 +1,19 @@
 $font-family: "ff-enzo-web", sans-serif;
-$font-size-body: 1rem;
+
+$font-size-base: 100%;
+$font-size-regular: 1rem, 1.25;
+$font-size-medium: 1.125rem, 1.11111111;
+$font-size-large: 1.375rem, 1.13636364;
+$font-size-xlarge: 1.625rem, 1.15384615;
+$font-size-xxlarge: 2rem, 1.25;
+$font-size-huge: 4rem, 1.125;
+
+$font-size-h1: $font-size-xxlarge;
+$font-size-h2: $font-size-xlarge;
+$font-size-h3: $font-size-large;
+$font-size-h4: $font-size-medium;
+$font-size-body: $font-size-regular;
+
 $font-weight-light: 300;
 $font-weight-medium: 600;
 $font-weight-bold: 700;
