@@ -1,9 +1,6 @@
 .Piece {
-  position: relative;
-}
-
-.Piece-link {
   display: block;
+  position: relative;
   font-size: 0;
 
   &:hover {
