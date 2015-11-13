@@ -1,0 +1,59 @@
+.Animation {
+  animation-fill-mode: both;
+}
+
+.Animation-fadeOutUp {
+  animation-duration: .3s;
+  animation-timing-function: ease;
+  animation-name: fadeOutUp;
+
+  @keyframes fadeOutUp {
+    0%   {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, -60px);
+    }
+  }
+}
+
+.Animation-fadeInDown {
+  animation-duration: .3s;
+  animation-timing-function: ease;
+  animation-name: fadeInDown;
+
+  @keyframes fadeInDown {
+    0%   {
+      opacity: 0;
+      transform: translate(0, -60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.Animation-fadeOut {
+  animation-duration: .3s;
+  animation-timing-function: ease;
+  animation-name: fadeOut;
+
+  @keyframes fadeOut {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}
+
+.Animation-fadeIn {
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation: fadeIn;
+
+  @keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
