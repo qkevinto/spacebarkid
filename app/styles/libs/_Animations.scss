@@ -50,7 +50,7 @@
 .Animation-fadeIn {
   animation-duration: 1s;
   animation-timing-function: ease;
-  animation: fadeIn;
+  animation-name: fadeIn;
 
   @keyframes fadeIn {
     0%   { opacity: 0; }
