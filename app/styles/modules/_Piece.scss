@@ -35,30 +35,6 @@
     opacity: 0;
     background: transparentize($color-primary, .5);
     transition: .3s opacity ease;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      transition: .3s transform ease;
-      transition-delay: .2s;
-    }
-
-    &::before {
-      border-top: $border-weight solid $color-text-invert;
-      border-bottom: $border-weight solid $color-text-invert;
-      transform: scale(0, 1);
-    }
-
-    &::after {
-      border-left: $border-weight solid $color-text-invert;
-      border-right: $border-weight solid $color-text-invert;
-      transform: scale(1, 0);
-    }
   }
 }
 
