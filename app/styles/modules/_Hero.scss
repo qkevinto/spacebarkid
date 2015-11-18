@@ -1,11 +1,11 @@
 // Hero
 
-.Hero {
-
+.Hero-about {
+  @include font-size($font-size-large);
 }
 
 .Hero-tagLine {
-  @include font-size($font-size-xxlarge);
+  @include font-size($font-size-large);
   margin: .25rem 0;
   font-weight: $font-weight-light;
 

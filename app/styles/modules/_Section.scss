@@ -4,6 +4,7 @@ $Section-heading-lineLength: 40px;
 
 .Section {
   padding: $section-padding;
+  transition: 0.3s padding ease;
 
   @media only screen and ($media-query-screen-medium) {
     padding: $section-padding-medium;

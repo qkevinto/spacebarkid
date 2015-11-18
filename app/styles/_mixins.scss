@@ -11,3 +11,35 @@
     font-size: $font-size;
   }
 }
+
+@mixin animated-underline($thickness, $initial, $end, $focus) {
+  position: relative;
+  @if $focus == true {
+    outline: none;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: $thickness;
+    content: "";
+    background: currentColor;
+    transition: 0.3s transform ease;
+    transform-origin: left;
+    transform: scaleX($initial);
+  }
+
+  @if $focus == true {
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX($end);
+    }
+  }
+  @else {
+    &:hover::after {
+      transform: scaleX($end);
+    }
+  }
+}

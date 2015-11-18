@@ -7,6 +7,13 @@
 }
 
 .Navigation-title {
+  @include animated-underline(
+    $thickness: 2px,
+    $initial: 0,
+    $end: 0.8,
+    $focus: true
+  );
+  position: relative;
   font-weight: $font-weight-bold;
   text-decoration: none;
 }
@@ -17,6 +24,13 @@
 }
 
 .Navigation-link {
+  @include animated-underline(
+    $thickness: 1px,
+    $initial: 0,
+    $end: 0.8,
+    $focus: true
+  );
+  position: relative;
   margin-left: 2rem;
   text-decoration: none;
 }
