@@ -1,40 +1,55 @@
 // Piece
 
 .Piece {
-  display: block;
-  position: relative;
-  font-size: 0;
-  color: $color-text-invert;
-  text-shadow: 0px 0px 8px $color-primary;
+
 }
 
-.Piece-figure img {
-  transition: 0.3s filter ease, 0.3s transform ease;
-  filter: grayscale(80%);
+.Piece-content {
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
 
-  .Piece:hover &,
-  .Piece:focus & {
-    filter: grayscale(0);
+    @media only screen and ($media-query-screen-medium) {
+      width: 110%;
+      margin: 0 -5% 1rem;
+    }
   }
 }
 
-.Piece-image {
+.Piece-hero-figure {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.Piece-hero-image {
   width: 100%;
 }
 
-.Piece-caption {
-  @include font-size($font-size-body);
+.Piece-next {
+  position: relative;
+  overflow: hidden;
+  max-height: 200px;
+  display: block;
+}
+
+.Piece-next-title {
+  @include font-size($font-size-xxlarge);
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  padding: 2rem;
+  left: 50%;
+  top: 50%;
+  color: $color-text-invert;
+  text-shadow: 0px 0px 8px $color-primary;
+  transform: translate(-50%, -50%);
 }
 
-.Piece-title {
-  @include font-size($font-size-large);
-  margin-bottom: .5rem;
-  font-weight: $font-weight-medium;
+.Piece-next-image {
+  width: 100%;
+  transition: 0.3s filter ease, 0.3s transform ease;
+  filter: grayscale(80%);
+
+  .Piece-next:hover &,
+  .Piece-next:focus & {
+    filter: grayscale(0);
+  }
 }

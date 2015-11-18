@@ -61,7 +61,7 @@ body {
 }
 
 body {
-  @include font-size($font-size-regular);
+  @include font-size($font-size-body);
   font-family: $font-family;
   font-weight: $font-weight-medium;
   color: $color-text;
