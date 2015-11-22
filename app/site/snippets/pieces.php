@@ -1,9 +1,9 @@
 <section class="Section Animation Animation-fadeIn" data-transit-in="Animation-fadeIn" data-transit-out="Animation-fadeOut">
   <div class="Grid">
-    <h1 class="Section-heading Section-heading--horizontal"><?php echo $pages->find('pieces')->title(); ?></h1>
+    <h1 class="Section-heading Section-heading--horizontal"><?php echo $pages->find('work')->title(); ?></h1>
     <ul class="Pieces Grid-row Grid-row--flush">
       <?php
-        $pieces = $pages->find('pieces')->children()->visible();
+        $pieces = $pages->find('work')->children()->visible();
 
         foreach ($pieces as $piece) {
           $pieceTitle = $piece->title();

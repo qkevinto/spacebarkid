@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Piece
+title: Work
 pages: true
 files: true
 fields:
@@ -12,6 +12,8 @@ fields:
     type: info
     text: >
       Please ensure that each project has a thumbnail and hero image. Enter the file name of the thumbnail and hero image within the page's folder. Thumbnail will be cropped to an appropriate size automatically.
+
+      Thumbnails will automatically be cropped down to 600x400px.
   thumbnail:
     label: Thumbnail
     type:  text
