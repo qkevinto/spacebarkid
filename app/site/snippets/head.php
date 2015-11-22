@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="<?php echo $site->description(); ?>">
+    <meta name="keywords" content="<?php echo $site->keywords(); ?>">
+    <meta name="author" content="<?php echo $site->author(); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $site->title() ?></title>
 
