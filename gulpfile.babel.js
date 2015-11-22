@@ -41,16 +41,21 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('html', ['styles'], () => {
+gulp.task('php', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/*.html')
+  return gulp.src([
+        'app/site/**/*.php'
+      ], {
+        base: 'app'
+      }
+    )
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    .pipe($.if('*.php', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -80,9 +85,12 @@ gulp.task('fonts', () => {
 
 gulp.task('extras', () => {
   return gulp.src([
-    'app/*.*',
-    '!app/*.html'
+    'app/**/*.*',
+    '!app/styles/*.*',
+    '!app/scripts/*.*',
+    '!app/site/**/*.php'
   ], {
+    base: 'app',
     dot: true
   }).pipe(gulp.dest('dist'));
 });
@@ -123,6 +131,10 @@ gulp.task('serve:dist', () => {
   });
 });
 
+gulp.task('serve:kirby', () => {
+  gulp.watch('app/**/*', ['default']);
+});
+
 gulp.task('serve:test', () => {
   browserSync({
     notify: false,
@@ -155,7 +167,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'php', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
