@@ -13,7 +13,7 @@
       $nextPage = $page->nextVisible() ? $page->nextVisible() : $page->parent()->children()->first();
     ?>
     <a href="<?php echo $nextPage->url(); ?>" class="Piece-next">
-      <span class="Piece-next-title"><?php echo $nextPage->title(); ?></span>
+      <span class="Piece-next-heading"><?php echo $nextPage->title(); ?></span>
       <div class="Piece-next-background" style="background-image: url(<?php echo $nextPage->files()->find($nextPage->hero())->url(); ?>)"></div>
     </a>
   </aside>

@@ -11,8 +11,10 @@
           <figure class="Pieces-item-figure">
             <img class="Pieces-item-image" src="<?php echo $piece->files()->find($piece->hero())->url(); ?>">
             <figcaption class="Pieces-item-caption">
-              <h1 class="Pieces-item-title"><?php echo $piece->title(); ?></h1>
-              <p class="Pieces-item-description"><?php echo $piece->text(); ?></p>
+              <div class="Pieces-item-heading">
+                <h1 class="Pieces-item-title"><?php echo $piece->title(); ?></h1>
+              </div>
+              <p class="Pieces-item-description"><?php echo $piece->excerpt(); ?></p>
             </figcaption>
           </figure>
         </a>

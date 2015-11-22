@@ -20,12 +20,17 @@
   text-decoration: none;
 }
 
-.Navigation-links {
-  display: flex;
+.Navigation-social {
+  display: inline-block;
+  vertical-align: top;
   list-style: none;
 }
 
-.Navigation-link {
+.Navigation-social-item {
+  display: inline-block;
+}
+
+.Navigation-social-link {
   @include animated-underline(
     $thickness: 1px,
     $initial: 0,
@@ -33,7 +38,7 @@
     $focus: true
   );
   position: relative;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   text-decoration: none;
 }
 

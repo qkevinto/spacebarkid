@@ -15,6 +15,9 @@ fields:
   hero:
     label: Hero Image
     type:  text
-  tagline:
-    label: Tagline
+  excerpt:
+    label: Excerpt
+    type: textarea
+  text:
+    label: Text
     type:  textarea
