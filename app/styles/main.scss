@@ -7,11 +7,23 @@
 @import "variables";
 @import "mixins";
 @import "base";
-@import "layouts/Home";
+@import "modules/Icons";
+@import "modules/Grid";
+@import "modules/Section";
+@import "modules/Navigation";
+@import "modules/Hero";
+@import "modules/Pieces";
+@import "modules/Piece";
+@import "modules/About";
+@import "modules/Footer";
 
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+.main {
+  position: relative;
 }

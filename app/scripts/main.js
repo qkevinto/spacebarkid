@@ -1,3 +1,9 @@
+var transitElements = document.querySelectorAll('[data-transit-out]');
+var linkElements = document.querySelectorAll('a[href]');
+var linkElementsArray = [].slice.call(linkElements, 0);
+var aboutToggleElement = document.querySelector('[data-target="navigation-about-toggle"]');
+var aboutToggleString = aboutToggleElement.innerHTML;
+
 var transit = {
   out: function(elements, callback) {
     'use strict';
@@ -23,13 +29,9 @@ var transit = {
   }
 };
 
-var transitElements = document.querySelectorAll('[data-transit-out]');
-var linkElements = document.querySelectorAll('a[href]');
-var linkElementsArray = [].slice.call(linkElements, 0);
-
 linkElementsArray.forEach(function(element) {
   'use strict';
-  var href = element.hasAttribute('href') ? element.getAttribute('href') : false;
+  var href = element.hasAttribute('href') && !element.hasAttribute('data-no-transit') ? element.getAttribute('href') : false;
   if (href) {
     element.addEventListener('click', function(event) {
       event.preventDefault();
@@ -37,5 +39,19 @@ linkElementsArray.forEach(function(element) {
         document.location.href = href;
       });
     });
+  }
+});
+
+aboutToggleElement.addEventListener('click', function() {
+  'use strict';
+  var aboutSection = document.querySelector('[data-target="about-section"]');
+  var aboutCloseString = aboutToggleElement.getAttribute('data-close-string');
+
+  if (aboutSection.classList.contains('is-visible')) {
+    aboutSection.classList.remove('is-visible');
+    aboutToggleElement.innerHTML = aboutToggleString;
+  } else {
+    aboutSection.classList.add('is-visible');
+    aboutToggleElement.innerHTML = aboutCloseString;
   }
 });

@@ -1,0 +1,17 @@
+Title: spacebarkid
+
+----
+
+Author: spacebarkid/Shane Brown
+
+----
+
+Description: spacebarkid/Shane Brown's Portfolio.
+
+----
+
+Keywords: spacebarkid, Shane Brown, design, experimental, code, UI, UX
+
+----
+
+Copyright: © (date: Year) spacebarkid — All rights reserved.

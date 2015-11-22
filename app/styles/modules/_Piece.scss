@@ -17,18 +17,20 @@
 }
 
 .Piece-hero-figure {
-  max-height: 600px;
+  height: 600px;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .Piece-hero-image {
-  width: 100%;
+  @include visibly-hidden();
 }
 
 .Piece-next {
   position: relative;
   overflow: hidden;
-  max-height: 200px;
   display: block;
 }
 
@@ -43,9 +45,12 @@
   transform: translate(-50%, -50%);
 }
 
-.Piece-next-image {
-  width: 100%;
+.Piece-next-background {
+  height: 200px;
   transition: 0.3s filter ease, 0.3s transform ease;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   filter: grayscale(80%);
 
   .Piece-next:hover &,

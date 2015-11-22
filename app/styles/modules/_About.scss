@@ -1,7 +1,16 @@
 // About
 
 .About {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparentize($color-secondary, 0.05);
+  transform: translateY(-150%);
+  transition: 0.3s transform ease;
 
+  &.is-visible {
+    transform: translateY(0);
+  }
 }
 
 .About-primary {
