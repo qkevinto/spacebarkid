@@ -2,6 +2,10 @@ Title: Project C
 
 ----
 
+Thumbnail: hightide.jpg
+
+----
+
 Hero: hightide.jpg
 
 ----

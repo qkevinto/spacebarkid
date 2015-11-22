@@ -5,10 +5,12 @@
   top: 0;
   width: 100%;
   background: transparentize($color-secondary, 0.05);
+  opacity: 0;
   transform: translateY(-150%);
-  transition: 0.3s transform ease;
+  transition: 0.5s transform ease, 0.3s opacity ease;
 
   &.is-visible {
+    opacity: 1;
     transform: translateY(0);
   }
 }

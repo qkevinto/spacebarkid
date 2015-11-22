@@ -49,3 +49,13 @@
   padding: 0rem 0.2rem;
   font-weight: $font-weight-medium;
 }
+
+.Pieces-item-description {
+  @include animated-highlight(
+    $color: $color-primary,
+    $hoverColor: $color-secondary,
+    $hoverTextColor: $color-text,
+    $parentHover: ".Pieces-item"
+  );
+  padding: 0rem 0.2rem;
+}

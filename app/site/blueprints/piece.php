@@ -11,7 +11,10 @@ fields:
     label: Note
     type: info
     text: >
-      Please ensure that each project has a hero image. Enter the file name of the hero image within the page's folder.
+      Please ensure that each project has a thumbnail and hero image. Enter the file name of the thumbnail and hero image within the page's folder. Thumbnail will be cropped to an appropriate size automatically.
+  thumbnail:
+    label: Thumbnail
+    type:  text
   hero:
     label: Hero Image
     type:  text

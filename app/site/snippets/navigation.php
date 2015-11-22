@@ -3,13 +3,15 @@
   <div>
     <ul class="Navigation-social">
       <li class="Navigation-social-item">
-        <a class="Navigation-social-link" href="https://twitter.com/spacebarkid" target="_blank">
+        <a class="Navigation-social-link" href="<?php echo $pages->find('contact')->twitter(); ?>" title="spacebarkid's Twitter" target="_blank">
+          <span class="Navigation-social-link-text">spacebarkid's Twitter</span>
           <svg aria-hidden="true" class="Icons">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/symbols.svg#twitter"></use>
           </svg>
         </a>
       <li class="Navigation-social-item">
-        <a class="Navigation-social-link" href="mailto:shane@spacebarkid.com" data-no-transit>
+        <a class="Navigation-social-link" href="<?php echo $pages->find('contact')->email(); ?>" title="Email spacebarkid" data-no-transit>
+          <span class="Navigation-social-link-text">Email spacebarkid</span>
           <svg aria-hidden="true" class="Icons">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/symbols.svg#email"></use>
           </svg>

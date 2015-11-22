@@ -42,6 +42,10 @@
   text-decoration: none;
 }
 
+.Navigation-social-link-text {
+  @include visibly-hidden;
+}
+
 .Navigation-button {
   @include font-size($font-size-large);
   @include animated-underline(

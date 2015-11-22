@@ -2,7 +2,15 @@ Title: Project A
 
 ----
 
+Thumbnail: forrest.jpg
+
+----
+
 Hero: forrest.jpg
+
+----
+
+Excerpt: A smart-home system  with an emphasis on controlling the mood and atmosphere of a space.
 
 ----
 

@@ -4,17 +4,24 @@
     <ul class="Pieces Grid-row Grid-row--flush">
       <?php
         $pieces = $pages->find('pieces')->children()->visible();
+
+        foreach ($pieces as $piece) {
+          $pieceTitle = $piece->title();
+          $pieceExcerpt = $piece->excerpt();
+          $pieceURI = $piece->uri();
+          $thumbnailObject = $piece->files()->find($piece->thumbnail());
+          $thumbnailURL = thumb($thumbnailObject, array('width' => 600, 'height' => 400, 'crop' => true))->url();
+          $thumbnailTitle = $thumbnailObject->title();
       ?>
-      <?php foreach ($pieces as $piece) {?>
       <li class="Grid-item Grid-item--flush Grid-item--oneHalf">
-        <a class="Pieces-item" href="<?php echo $piece->uri(); ?>">
+        <a class="Pieces-item" href="<?php echo $pieceURI; ?>" title="<?php echo $pieceTitle; ?>">
           <figure class="Pieces-item-figure">
-            <img class="Pieces-item-image" src="<?php echo $piece->files()->find($piece->hero())->url(); ?>">
+            <img class="Pieces-item-image" src="<?php echo $thumbnailURL; ?>" alt="<?php echo $thumbnailTitle; ?>">
             <figcaption class="Pieces-item-caption">
               <div class="Pieces-item-heading">
-                <h1 class="Pieces-item-title"><?php echo $piece->title(); ?></h1>
+                <h1 class="Pieces-item-title"><?php echo $pieceTitle; ?></h1>
               </div>
-              <p class="Pieces-item-description"><?php echo $piece->excerpt(); ?></p>
+              <p class="Pieces-item-description"><?php echo $pieceExcerpt; ?></p>
             </figcaption>
           </figure>
         </a>
