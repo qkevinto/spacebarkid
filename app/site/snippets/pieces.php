@@ -13,7 +13,7 @@
           $thumbnailURL = thumb($thumbnailObject, array('width' => 600, 'height' => 400, 'crop' => true))->url();
           $thumbnailTitle = $thumbnailObject->title();
       ?>
-      <li class="Grid-item Grid-item--flush Grid-item--oneHalf">
+      <li class="Pieces-listItem Grid-item Grid-item--flush Grid-item--oneHalf">
         <a class="Pieces-item" href="<?php echo $pieceURI; ?>" title="<?php echo $pieceTitle; ?>">
           <figure class="Pieces-item-figure">
             <img class="Pieces-item-image" src="<?php echo $thumbnailURL; ?>" alt="<?php echo $thumbnailTitle; ?>">

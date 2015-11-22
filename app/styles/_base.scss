@@ -13,8 +13,13 @@ body {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+li,
+ol {
+  margin-bottom: 0.25rem
 }
 
 figure {
