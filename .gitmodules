@@ -1,0 +1,6 @@
+[submodule "app/kirby"]
+	path = app/kirby
+	url = git@github.com:getkirby/kirby.git
+[submodule "app/panel"]
+	path = app/panel
+	url = git@github.com:getkirby/panel.git
