@@ -132,7 +132,7 @@ gulp.task('serve:dist', () => {
   });
 });
 
-gulp.task('serve:kirby', () => {
+gulp.task('watch', () => {
   gulp.watch('app/**/*', ['default']);
 });
 
