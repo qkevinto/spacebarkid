@@ -88,7 +88,8 @@ gulp.task('extras', () => {
     'app/**/*.*',
     '!app/styles/**/*.*',
     '!app/scripts/**/*.*',
-    '!app/site/**/*.php'
+    '!app/site/snippets/**/*.php',
+    '!app/site/templates/**/*.php'
   ], {
     base: 'app',
     dot: true
