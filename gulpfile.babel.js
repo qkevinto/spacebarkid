@@ -85,8 +85,8 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/**/*.*',
-    '!app/styles/*.*',
-    '!app/scripts/*.*',
+    '!app/styles/**/*.*',
+    '!app/scripts/**/*.*',
     '!app/site/**/*.php'
   ], {
     base: 'app',
