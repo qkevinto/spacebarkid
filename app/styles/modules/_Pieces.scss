@@ -1,6 +1,7 @@
 // Pieces
 
 .Pieces {
+  padding: 0;
   list-style: none;
 }
 
@@ -36,30 +37,28 @@
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
+  overflow: hidden;
   color: $color-text-invert;
+
+  @media only screen and ($media-query-screen-medium) {
+    padding: 2rem;
+  }
 }
 
 .Pieces-item-title {
   @include font-size($font-size-large);
-  @include animated-highlight(
+  @include multiline-highlight(
     $color: $color-primary,
-    $hoverColor: $color-secondary,
-    $hoverTextColor: $color-text,
-    $parentHover: ".Pieces-item"
-  );
-  display: inline-block;
+    $padding: 0.25rem
+  )
   margin-bottom: 0.5rem;
-  padding: 0rem 0.2rem;
   font-weight: $font-weight-medium;
 }
 
 .Pieces-item-description {
-  @include animated-highlight(
+  @include multiline-highlight(
     $color: $color-primary,
-    $hoverColor: $color-secondary,
-    $hoverTextColor: $color-text,
-    $parentHover: ".Pieces-item"
-  );
-  padding: 0rem 0.2rem;
+    $padding: 0.25rem
+  )
 }

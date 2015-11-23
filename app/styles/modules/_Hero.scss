@@ -2,6 +2,11 @@
 
 .Hero-about {
   @include font-size($font-size-large);
+  font-weight: $font-weight-medium;
+
+  strong {
+    font-weight: $font-weight-bold;
+  }
 }
 
 .Hero-tagLine {
@@ -12,9 +17,4 @@
   @media only screen and ($media-query-screen-medium) {
     @include font-size($font-size-huge);
   }
-}
-
-.Hero-emphasis,
-.Hero-about strong {
-  font-weight: $font-weight-bold;
 }

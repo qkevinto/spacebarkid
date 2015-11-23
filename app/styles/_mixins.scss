@@ -90,6 +90,13 @@
   }
 }
 
+@mixin multiline-highlight($color, $padding) {
+  display: inline;
+  box-decoration-break: clone;
+  padding: $padding;
+  background: $color;
+}
+
 @mixin visibly-hidden() {
   position:absolute;
   left:-10000px;

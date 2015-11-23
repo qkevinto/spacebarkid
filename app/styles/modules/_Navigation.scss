@@ -3,9 +3,11 @@
 .Navigation {
   @include font-size($font-size-large);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   z-index: 3;
-  justify-content: space-between;
+  line-height: 1;
 }
 
 .Navigation-title {
@@ -24,7 +26,7 @@
   display: inline-block;
   margin: 0;
   padding: 0;
-  vertical-align: top;
+  vertical-align: middle;
   list-style: none;
 }
 
@@ -58,10 +60,10 @@
     $end: 0.8,
     $focus: true
   );
-  font-weight: $font-weight-medium;
   margin-left: 1rem;
   border: none;
   padding: 0;
   background: none;
   cursor: pointer;
+  font-weight: $font-weight-medium;
 }

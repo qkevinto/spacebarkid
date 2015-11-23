@@ -1,6 +1,9 @@
 // Piece
 
 .Piece-content {
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-regular;
+
   img,
   iframe {
     width: 100%;
@@ -41,12 +44,10 @@
 
 .Piece-next-heading {
   @include font-size($font-size-xxlarge);
-  @include animated-highlight(
+  @include multiline-highlight(
     $color: $color-primary,
-    $hoverColor: $color-secondary,
-    $hoverTextColor: $color-text,
-    $parentHover: ".Piece-next"
-  );
+    $padding: 0.25rem
+  )
   z-index: 1;
   padding: 0rem 0.2rem;
   color: $color-text-invert;

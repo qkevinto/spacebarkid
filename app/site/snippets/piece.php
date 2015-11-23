@@ -11,7 +11,7 @@
   <section class="Section Piece-content">
     <div class="Grid Grid--small">
       <h1><?php echo $page->title(); ?></h1>
-      <?php echo kirbytext($page->text()); ?>
+      <?php echo $page->text()->kirbytext(); ?>
     </div>
   </section>
   <aside>
@@ -20,7 +20,7 @@
       $nextPageHeroImageObject = $nextPage->files()->find($nextPage->hero());
       $nextPageHeroImageURL = $nextPageHeroImageObject->url();
     ?>
-    <a href="<?php echo $nextPage->url(); ?>" class="Piece-next">
+    <a href="<?php echo $nextPage->url(); ?>" class="Piece-next Section">
       <span class="Piece-next-heading"><?php echo $nextPage->title(); ?></span>
       <div class="Piece-next-background" style="background-image: url(<?php echo $nextPageHeroImageURL; ?>)"></div>
     </a>
