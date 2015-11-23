@@ -57,8 +57,13 @@
 }
 
 .Pieces-item-description {
-  @include multiline-highlight(
-    $color: $color-primary,
-    $padding: 0.25rem
-  )
+  visibility: hidden;
+
+  @media only screen and ($media-query-screen-medium) {
+    @include multiline-highlight(
+      $color: $color-primary,
+      $padding: 0.25rem
+    )
+    visibility: visible;
+  }
 }
