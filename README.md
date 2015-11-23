@@ -9,7 +9,7 @@ Personal website for Shane Brown (spacebarkid).
 
 ### Development
 
-Run `gulp serve` to serve project with [BrowserSync](http://www.browsersync.io/) with style injection and auto reload.
+Run `gulp watch` to watch project folder for any changes and rebuild when necessary.
 
 ### Build
 
