@@ -1,8 +1,12 @@
+/* globals svg4everybody */
+
 var transitElements = document.querySelectorAll('[data-transit-out]');
 var linkElements = document.querySelectorAll('a[href]');
 var linkElementsArray = [].slice.call(linkElements, 0);
 var aboutToggleElement = document.querySelector('[data-target="navigation-about-toggle"]');
 var aboutToggleString = aboutToggleElement.innerHTML;
+
+svg4everybody();
 
 var transit = {
   out: function(elements, callback) {
