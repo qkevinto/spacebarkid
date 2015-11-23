@@ -4,5 +4,4 @@
   <?php snippet('piece') ?>
   <?php snippet('about') ?>
 </main>
-<?php snippet('footer') ?>
 <?php snippet('bottom') ?>

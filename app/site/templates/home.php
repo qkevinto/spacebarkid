@@ -3,7 +3,6 @@
 <main class="main">
   <?php snippet('hero') ?>
   <?php snippet('pieces') ?>
-  <?php snippet('about') ?>  
+  <?php snippet('about') ?>
 </main>
-<?php snippet('footer') ?>
 <?php snippet('bottom') ?>

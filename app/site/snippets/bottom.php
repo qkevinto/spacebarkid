@@ -10,6 +10,7 @@
 
     <!-- build:js /scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/svg4everybody/dist/svg4everybody.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
