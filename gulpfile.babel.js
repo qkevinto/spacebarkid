@@ -45,7 +45,8 @@ gulp.task('php', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
   return gulp.src([
-        'app/site/**/*.php'
+        'app/site/snippets/**/*.php',
+        'app/site/templates/**/*.php'
       ], {
         base: 'app'
       }
@@ -153,13 +154,18 @@ gulp.task('serve:test', () => {
 
 // inject bower components
 gulp.task('wiredep', () => {
-  gulp.src('app/styles/*.scss')
+  gulp.src('app/styles/**/*.scss')
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)+/
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/*.html')
+  gulp.src([
+      'app/site/snippets/**/*.php',
+      'app/site/templates/**/*.php',
+    ], {
+      base: 'app'
+    })
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)*\.\./
     }))
