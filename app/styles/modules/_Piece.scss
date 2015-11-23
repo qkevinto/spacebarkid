@@ -4,8 +4,28 @@
   font-family: $font-family-secondary;
   font-weight: $font-weight-regular;
 
-  img,
-  iframe {
+  .video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media only screen and ($media-query-screen-medium) {
+      width: 110%;
+      margin: 0 -5% 1rem;
+      padding-bottom: 61.88%;
+    }
+  }
+
+  img {
     width: 100%;
     margin-bottom: 1rem;
 
@@ -13,6 +33,16 @@
       width: 110%;
       margin: 0 -5% 1rem;
     }
+  }
+
+  a {
+    @include animated-underline(
+      $thickness: 1px,
+      $initial: 1,
+      $end: 0.2,
+      $focus: true
+    );
+    text-decoration: none;
   }
 }
 
