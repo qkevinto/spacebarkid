@@ -59,7 +59,7 @@
 .Pieces-item-description {
   visibility: hidden;
 
-  @media only screen and ($media-query-screen-medium) {
+  @media only screen and ($media-query-screen-small) {
     @include multiline-highlight(
       $color: $color-primary,
       $padding: 0.25rem

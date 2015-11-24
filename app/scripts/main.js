@@ -35,7 +35,9 @@ var transit = {
 
 linkElementsArray.forEach(function(element) {
   'use strict';
-  var href = element.hasAttribute('href') && !element.hasAttribute('data-no-transit') ? element.getAttribute('href') : false;
+  // Temporarily disable transition out due to safari not working properly.
+  var href = false;
+  //var href = element.hasAttribute('href') && !element.hasAttribute('data-no-transit') && !element.hasAttribute('target') ? element.getAttribute('href') : false;
   if (href) {
     element.addEventListener('click', function(event) {
       event.preventDefault();

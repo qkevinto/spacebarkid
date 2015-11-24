@@ -10,7 +10,7 @@ $font-size-medium: 1.125rem, 1.6;
 $font-size-large: 1.375rem, 1.6;
 $font-size-xlarge: 1.625rem, 1.25;
 $font-size-xxlarge: 2rem, 1.25;
-$font-size-huge: 4rem, 1.125;
+$font-size-huge: 3rem, 1.125;
 
 $font-size-h1: $font-size-xxlarge;
 $font-size-h2: $font-size-xlarge;
@@ -41,4 +41,5 @@ $section-padding-medium: $section-padding-vertical-medium $section-padding-horiz
 $border-weight: 2px;
 
 // Media Queries
+$media-query-screen-small: "min-width: 43.75rem";
 $media-query-screen-medium: "min-width: 53.750rem";

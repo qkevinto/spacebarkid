@@ -1,15 +1,18 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Hero
+title: Contact
 pages: false
 files: false
 fields:
   title:
     label: Title
     type:  text
-  about:
-    label: One-liner About
+    required: true
+  twitter:
+    label: Twitter Handle
     type:  text
-  tagline:
-    label: Tagline
+    required: true
+  email:
+    label: Email
     type:  text
+    required: true

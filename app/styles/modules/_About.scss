@@ -2,6 +2,7 @@
 
 .About {
   position: absolute;
+  z-index: 10;
   top: 0;
   width: 100%;
   background: transparentize($color-secondary, 0.05);
